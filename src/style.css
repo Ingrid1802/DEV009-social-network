@@ -236,6 +236,7 @@ body {
   }
 }
 
+<<<<<<< HEAD
 
 
 
@@ -254,6 +255,8 @@ body {
 
 
 
+=======
+>>>>>>> c7e6697e2ca15fc79b267506150958f97554b86c
 /*-----------------------------Pagina principal (LOGIN)---------------------------------------------*/
 
 .mimain {
@@ -409,6 +412,19 @@ body {
   }
 }
 
+<<<<<<< HEAD
+=======
+@media (min-width: 320px) and (max-width: 480px) {
+  #formRegistro1 {
+    width: 90%;
+    margin: 110px;
+    padding: 10px;
+    overflow: hidden;
+
+  }
+
+}
+>>>>>>> c7e6697e2ca15fc79b267506150958f97554b86c
 
 /*----------------- Feed ------------------------*/
 
@@ -418,6 +434,12 @@ body {
   max-width: 1000px;
   margin: 2px auto;
   height: 95%;
+<<<<<<< HEAD
+=======
+  /* display: grid; */
+  /* grid-auto-rows: 10% 25% 65%; */
+  background-color: black;
+>>>>>>> c7e6697e2ca15fc79b267506150958f97554b86c
 }
 
 .section_header {
@@ -427,7 +449,11 @@ body {
   display: grid;
   grid-template-columns: 7fr 1fr;
   height: auto;
+<<<<<<< HEAD
   background-color: #000;
+=======
+  background-color: #0e0c10;
+>>>>>>> c7e6697e2ca15fc79b267506150958f97554b86c
 }
 
 .feed_logo {
@@ -446,7 +472,11 @@ body {
   height: auto;
   background-color: #4B4355;
   border-radius: 8px;
+<<<<<<< HEAD
   margin: 15px 0 10px 0;
+=======
+  margin: 10px 0;
+>>>>>>> c7e6697e2ca15fc79b267506150958f97554b86c
   display: flex;
   flex-direction: column;
 }
@@ -533,7 +563,11 @@ button {
 .section_publicaciones {
   width: 100%;
   height: auto;
+<<<<<<< HEAD
   background-color: #4B4355;
+=======
+  /* background-color: #4B4355; */
+>>>>>>> c7e6697e2ca15fc79b267506150958f97554b86c
   border-radius: 8px;
   display: grid;
 }
@@ -541,6 +575,11 @@ button {
 
 .container_publicacion {
   display: grid;
+<<<<<<< HEAD
+=======
+  margin: 10px 0px;
+  background-color: #4B4355;
+>>>>>>> c7e6697e2ca15fc79b267506150958f97554b86c
 }
 
 section.like_edit_delete {
@@ -582,4 +621,17 @@ button.icono_delete {
   .icono_perfil {
     font-size: 35px;
   }
+<<<<<<< HEAD
+=======
+}
+
+
+
+
+
+
+.error {
+  color: #fff;
+  margin: auto;
+>>>>>>> c7e6697e2ca15fc79b267506150958f97554b86c
 }
