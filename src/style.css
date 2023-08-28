@@ -1,95 +1,101 @@
+/* importamos una letra de google fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 * {
+  /*Elimina márgenes y rellenos por defecto en todos los elementos */
   margin: 0;
   padding: 0;
+  /* Asegura que el tamaño total del elemento incluya el relleno y el borde */
   box-sizing: border-box;
 }
 
-html {
-  height: 100%;
-}
-
 body {
-  background: rgb(88, 76, 106);
+  /* Aplica un fondo con degradado lineal.*/
   background: linear-gradient(0deg, rgba(88, 76, 106, 1) 0%, rgba(47, 44, 33, 1) 49%);
+  /* Establece la fuente utilizada para el texto.*/
   font-family: "Poppins", sans-serif;
-  height: 100%;
 }
 
 /*-------------------------Contenedor Principal---------------------------*/
 #root {
-  background: rgb(88, 76, 106);
-  background: linear-gradient(0deg, rgba(88, 76, 106, 1) 0%, rgba(47, 44, 33, 1) 49%);
+  /*margin, width, max-width:, min-height : Define márgenes, ancho máximo y altura mínima del contenedor.*/
   margin: auto;
   width: 90%;
   max-width: 1600px;
-  /* overflow: hidden;
-  height: 100vh; */
-  height: 100%;
-  /* Ajusta la altura del contenedor principal, en este caso, ocupa toda la altura visible del viewport */
+  min-height: 100vh;
+  /*Utiliza un diseño en cuadrícula para organizar elementos en filas y columnas.*/
   display: grid;
+  /*Define una fila con tamaño flexible.*/
   grid-template-rows: 1fr;
-  /* Una fila con altura flexible */
-  justify-items: center;
   /* Centra los elementos horizontalmente en el contenedor */
-  /* align-items: center; */
+  justify-items: center;
   /* Centra los elementos verticalmente en el contenedor */
+  align-items: center;
 }
 
-
-
-
-
-
+/* -------------------------error 404---------------------------------------------------------------*/
+.error {
+  /*le ponemos la letra de color blanco*/
+  color: #fff;
+  /*con el margin auto centramos el mensaje*/
+  margin: auto;
+}
 
 /*-------------------------Contenedor Formulario - Registro Usuarios ---------------------------*/
 .container {
+  /*ponemos el fondo de color negro*/
   background-color: #000;
+  /*define el ancho del contenedor*/
   width: 90%;
-  height: 700px;
+  /*define el alto del contenedor*/
+  height: 650px;
   /* Ajusta la altura del contenedor .container según tus necesidades */
   border-radius: 20px;
+  /*Utiliza un diseño en cuadrícula para organizar elementos en filas y columnas.*/
   display: grid;
+  /*establece el espacio entre las filas y columnas de un diseño en cuadrícula.*/
   gap: 10px;
   /* Espacio entre las columnas */
   grid-template-columns: 50% 50%;
-  justify-items: center;
   /* Centra los elementos horizontalmente en el contenedor */
-  align-items: center;
+  justify-items: center;
   /* Centra los elementos verticalmente en el contenedor */
+  align-items: center;
 }
 
 .logo-content {
+  /*Utiliza un diseño en cuadrícula para organizar elementos en filas y columnas.*/
   display: grid;
 }
 
 .img-logo {
+  /*define el ancho del contenedor*/
   width: 450px;
 }
 
 .form-registro {
   border-radius: 10px;
   border: 2px solid rgba(255, 255, 255, 0.1);
+  /*agrega sombras*/
   box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+  /*define el ancho del contenedor*/
   width: 75%;
+  /*define el alto del contenedor*/
   height: 600px;
-  border-radius: 20px;
+  /*Utiliza un diseño en cuadrícula para organizar elementos en filas y columnas.*/
   display: grid;
+  /*establece el espacio entre las filas y columnas de un diseño en cuadrícula.*/
   gap: 8px;
+  /* Centra los elementos horizontalmente en el contenedor */
   justify-items: center;
-  /* Centra los elementos horizontalmente en .content-form */
+  /* Centra los elementos verticalmente en el contenedor */
   align-items: center;
-  /* Centra los elementos verticalmente en .content-form */
+  /* agrega espacio dentro del elemento, creando un margen interno alrededor del contenido*/
   padding: 25px 30px;
 }
 
 .title {
-  color: #FBD3E9;
-  color: -webkit-linear-gradient(to right, #BB377D, #FBD3E9);
-  /* Chrome 10-25, Safari 5.1-6 */
   color: linear-gradient(to right, #BB377D, #FBD3E9);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   font-size: 32px;
   margin: 10px;
 }
@@ -103,6 +109,7 @@ body {
 .mensajeRegreso {
   color: #BB377D;
   font-size: 16px;
+  /*se mostrará en una fuente más gruesa(estandar)*/
   font-weight: bold;
   margin: 5px;
   cursor: pointer;
@@ -114,40 +121,57 @@ body {
 }
 
 .input-iconos {
+  /*define el ancho del contenedor*/
   width: 95%;
+  /*Utiliza un diseño en cuadrícula para organizar elementos en filas y columnas.*/
   display: grid;
+  /* Define dos columnas: una para el ícono (automático) y otra para el input (1fr ocupa el espacio 
+    restante) */
   grid-template-columns: auto 1fr;
-  /* Define dos columnas: una para el ícono (automático) y otra para el input (1fr ocupa el espacio restante) */
-  align-items: center;
   /* Centrar verticalmente los elementos */
+  align-items: center;
 }
 
 .estilos-icono {
+  /*ponemos el fondo de color seminegro*/
   background-color: #232526;
+  /*define el ancho del contenedor*/
   width: 55px;
+  /*define el alto del contenedor*/
   height: 55px;
   text-align: center;
   font-size: 22px;
+  /* agrega espacio dentro del elemento, creando un margen interno alrededor del contenido*/
   padding: 10px;
-  color: #FBD3E9;
-  /* fallback for old browsers */
-  color: -webkit-linear-gradient(to right, #BB377D, #FBD3E9);
-  /* Chrome 10-25, Safari 5.1-6 */
   color: linear-gradient(to right, #BB377D, #FBD3E9);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .estilos-input {
+  /*define el ancho del contenedor*/
   width: 100%;
+  /*define el alto del contenedor*/
   height: 55px;
   color: #f5f5f5;
   border: none;
   background: rgba(233, 231, 231, 0.1);
-  border: 2px solid rgba(255, 255, 255, 0);
   overflow: hidden;
+  /* Oculta cualquier contenido que se desborde del contenedor */
+  /*
+  * Esto indica que todas las propiedades de estilo que cambien tendrán la transición animada. Significa 
+  que si cambian propiedades como color, width, height, background, etc., todas esas transiciones estarán 
+  controladas por esta declaración.
+
+  * es el tiempo 
+
+  * ease-in-out es una función que produce una animación de aceleración al principio y luego desaceleración 
+  hacia el final, lo que da como resultado una transición suave y natural.
+  */
   transition: all 0.5s ease-in-out;
+  /* agrega espacio dentro del elemento, creando un margen interno alrededor del contenido*/
   padding: 5px;
   font-size: 18px;
+  /*establece el grosor de la fuente del texto.*/
   font-weight: 500;
 }
 
@@ -156,32 +180,43 @@ body {
   border: 2px solid rgba(233, 170, 208, 0.247);
 }
 
-.btnRegistro {
-  width: 80%;
+.form-registro .btnRegistro {
+  /*define el ancho del contenedor*/
+  width: 70%;
+  /*define el alto del contenedor*/
   height: 50px;
   margin: 10px;
   font-size: 20px;
   color: #f5f5f5;
+  /*establece un grosor de fuente más negrita que el valor predeterminado*/
   font-weight: bolder;
+  /*ponemos el fondo de color rosita*/
   background-color: #e2a9c9;
   border: none;
   border-radius: 20px;
   align-items: center;
 }
 
-.btnRegistro:hover {
+.form-registro .btnRegistro:hover {
   cursor: pointer;
+  /*ponemos el fondo de color fucia*/
   background: #BB377D;
+  /*agrega sombras*/
   box-shadow: 0px 4px 35px -5px #BB377D;
 }
 
-.btnGoogle {
+.form-registro .btnGoogle {
+  /*define el ancho del contenedor*/
   width: 80%;
+  /*define el alto del contenedor*/
   height: 50px;
+  /* agrega espacio dentro del elemento, creando un margen interno alrededor del contenido*/
   padding: 10px;
   font-size: 20px;
   color: #f5f5f5;
+  /*establece un grosor de fuente más negrita que el valor predeterminado*/
   font-weight: bolder;
+  /*ponemos el fondo de color rosita*/
   background-color: #e2a9c9;
   border: none;
   border-radius: 20px;
@@ -190,87 +225,101 @@ body {
   align-items: center;
 }
 
-.btnGoogle img {
+.form-registro .btnGoogle img {
   margin: 10px;
 }
 
-.btnGoogle:hover {
+.form-registro .btnGoogle:hover {
   cursor: pointer;
+  /*ponemos el fondo de color celeste*/
   background: #54cbe0;
+  /*agrega sombras*/
   box-shadow: 0px 4px 35px -5px #54cbe0;
-  cursor: pointer;
 
 }
 
 #error-container {
   color: #ec4545;
+  /*se mostrará en una fuente más gruesa(estandar)*/
   font-weight: bold;
   font-size: 20px;
 }
 
 /*----------------- Responsive design ------------------------*/
+@media (max-width: 1200px) {
+  .img-logo {
+    /*define el ancho del contenedor*/
+    width: 350px;
+  }
+
+  .container {
+    /*define el ancho del contenedor*/
+    width: 100%;
+  }
+
+  .form-registro {
+    /*define el ancho del contenedor*/
+    width: 90%;
+  }
+
+}
 
 @media (max-width: 768px) {
   .img-logo {
     content: url('img/logo-feed.png');
+    /*define el ancho del contenedor*/
     width: 250px;
   }
 
   .container {
+    /*define el ancho del contenedor*/
     width: 100%;
     grid-template-columns: 1fr;
+    /*establece el espacio entre las filas y columnas de un diseño en cuadrícula.*/
     gap: 0;
+    /* Centra los elementos horizontalmente en el contenedor */
     justify-items: center;
+    /* Centra los elementos verticalmente en el contenedor */
     align-items: center;
   }
 
   .form-registro {
+    /*define el ancho del contenedor*/
     width: 90%;
+    /*define el alto del contenedor*/
+    height: 550px;
   }
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
   .form-registro {
+    /*define el ancho del contenedor*/
     width: 90%;
+    /* agrega espacio dentro del elemento, creando un margen interno alrededor del contenido*/
     padding: 10px;
   }
 }
 
-<<<<<<< HEAD
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-=======
->>>>>>> c7e6697e2ca15fc79b267506150958f97554b86c
 /*-----------------------------Pagina principal (LOGIN)---------------------------------------------*/
 
 .mimain {
+  /*ponemos el fondo de color negro*/
   background-color: #000;
+  /*define el ancho del contenedor*/
   width: 90%;
+  /*define el alto del contenedor*/
   height: 700px;
   /* Ajusta la altura del contenedor .container según tus necesidades */
   border-radius: 20px;
+  /*Utiliza un diseño en cuadrícula para organizar elementos en filas y columnas.*/
   display: grid;
+  /*establece el espacio entre las filas y columnas de un diseño en cuadrícula.*/
   gap: 10px;
   /* Espacio entre las columnas */
   grid-template-columns: 50% 50%;
-  justify-items: center;
   /* Centra los elementos horizontalmente en el contenedor */
+  justify-items: center;
+  /* Centra los elementos verticalmente en el contenedor */
   align-items: center;
   /* Centra los elementos verticalmente en el contenedor */
 }
@@ -278,20 +327,24 @@ body {
 #formRegistro1 {
   border-radius: 10px;
   border: 2px solid rgba(255, 255, 255, 0.1);
+  /*agrega sombras*/
   box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
-  border-radius: 20px;
+  /*define el ancho del contenedor*/
   width: 87%;
+  /*define el alto del contenedor*/
   height: 80%;
+  /*Utiliza un diseño en cuadrícula para organizar elementos en filas y columnas.*/
   display: grid;
+  /* Centra los elementos horizontalmente en el contenedor */
   justify-items: center;
+  /* Centra los elementos verticalmente en el contenedor */
   align-items: center;
+  /* agrega espacio dentro del elemento, creando un margen interno alrededor del contenido*/
   padding: 25px 30px;
 }
 
 .title1 {
   color: #FBD3E9;
-  color: -webkit-linear-gradient(to right, #BB377D, #FBD3E9);
-  /* Chrome 10-25, Safari 5.1-6 */
   color: linear-gradient(to right, #BB377D, #FBD3E9);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   font-size: 32px;
@@ -307,18 +360,23 @@ body {
 .Registrate {
   color: #BB377D;
   font-size: 16px;
+  /*se mostrará en una fuente más gruesa(estandar)*/
   font-weight: bold;
   margin: 5px;
   cursor: pointer;
 }
 
 .btnLogin {
+  /*define el ancho del contenedor*/
   width: 70%;
+  /*define el alto del contenedor*/
   height: 50px;
   margin: 10px;
   font-size: 20px;
   color: #f5f5f5;
+  /*establece un grosor de fuente más negrita que el valor predeterminado*/
   font-weight: bolder;
+  /*ponemos el fondo de color rosita*/
   background-color: #e2a9c9;
   border: none;
   border-radius: 20px;
@@ -327,50 +385,32 @@ body {
 
 .btnLogin:hover {
   cursor: pointer;
+  /*ponemos el fondo de color fucsia*/
   background: #BB377D;
+  /*agrega sombras*/
   box-shadow: 0px 4px 35px -5px #BB377D;
 }
 
-#formRegistro1 .label-nombre,
-.label-contraseña {
-  font-size: 20px;
-}
-
-.label-nombre,
-.label-contraseña {
-  margin-top: 15px;
-}
-
-
-#formRegistro1 .input-nombre,
-.input-contraseña {
-  width: 70%;
-  height: 30px;
-
-}
-
-.button {
-  width: 50%;
-  height: 30px;
-  margin: 10px;
+.section-img {
+  display: flex;
 }
 
 .img-logo1 {
+  /*define el ancho del contenedor*/
   width: 450px;
 }
 
-.p {
-  font-size: 12px;
-  margin-top: 17px;
-}
-
-.btnGoogle {
+#formRegistro1 .btnGoogle {
+  /*define el ancho del contenedor*/
   width: 70%;
+  /*define el alto del contenedor*/
   height: 50px;
+  /* agrega espacio dentro del elemento, creando un margen interno alrededor del contenido*/
   padding: 10px;
   font-size: 20px;
   color: #f5f5f5;
   font-weight: bolder;
+  /*ponemos el fondo de color rosita*/
   background-color: #e2a9c9;
   border: none;
   border-radius: 20px;
@@ -379,25 +419,44 @@ body {
   align-items: center;
 }
 
-.btnGoogle img {
+#formRegistro1 .btnGoogle img {
   margin: 10px;
 }
 
-.btnGoogle:hover {
+#formRegistro1 .btnGoogle:hover {
   cursor: pointer;
+  /*ponemos el fondo de color celeste*/
   background: #54cbe0;
+  /*agrega sombras*/
   box-shadow: 0px 4px 35px -5px #54cbe0;
-  cursor: pointer;
-
 }
 
 /*----------------- Responsive design (LOGIN)------------------------*/
 
+@media (max-width: 1200px) {
+  .img-logo1 {
+    /*define el ancho del contenedor*/
+    width: 350px;
+  }
+
+  .mimain {
+    /*define el ancho del contenedor*/
+    width: 100%;
+  }
+
+  #formRegistro1 {
+    /*define el ancho del contenedor*/
+    width: 90%;
+  }
+
+}
+
 @media (max-width: 768px) {
   .img-logo1 {
     content: url('img/logo-feed.png');
-    width: 250px;
-    margin: -67px;
+    /*define el ancho del contenedor*/
+    width: 350px;
+    margin: 15px;
   }
 
   .mimain {
@@ -405,117 +464,230 @@ body {
   }
 
   #formRegistro1 {
+    /*define el ancho del contenedor*/
     width: 90%;
-    margin: 137px;
-    overflow: hidden;
+    height: 550px;
+    margin: 15px;
 
   }
 }
 
-<<<<<<< HEAD
-=======
 @media (min-width: 320px) and (max-width: 480px) {
   #formRegistro1 {
+    /*define el ancho del contenedor*/
     width: 90%;
-    margin: 110px;
+    /* agrega espacio dentro del elemento, creando un margen interno alrededor del contenido*/
     padding: 10px;
     overflow: hidden;
+    /* Oculta cualquier contenido que se desborde del contenedor */
 
   }
 
 }
->>>>>>> c7e6697e2ca15fc79b267506150958f97554b86c
 
 /*----------------- Feed ------------------------*/
 
 .container_feed {
-  border: 2px solid #ccc;
+  border: 2px solid #FBD3E9;
+  /*define el ancho del contenedor*/
   width: 100%;
+  /*define el ancho maximo del contenedor*/
   max-width: 1000px;
   margin: 2px auto;
-  height: 95%;
-<<<<<<< HEAD
-=======
-  /* display: grid; */
-  /* grid-auto-rows: 10% 25% 65%; */
+  height: 100%;
+  /*ponemos el fondo de color negro*/
   background-color: black;
->>>>>>> c7e6697e2ca15fc79b267506150958f97554b86c
 }
 
 .section_header {
+  /*define el ancho del contenedor*/
   width: 100%;
+  /* agrega espacio dentro del elemento, creando un margen interno alrededor del contenido*/
   padding: 0 20px;
-  border-bottom: 2px solid #ccc;
+  border-bottom: 2px solid #FBD3E9;
+  /*Utiliza un diseño en cuadrícula para organizar elementos en filas y columnas.*/
   display: grid;
   grid-template-columns: 7fr 1fr;
   height: auto;
-<<<<<<< HEAD
-  background-color: #000;
-=======
+  /*ponemos el fondo de color negro*/
   background-color: #0e0c10;
->>>>>>> c7e6697e2ca15fc79b267506150958f97554b86c
 }
 
 .feed_logo {
+  /*define el alto del contenedor*/
   height: 60px;
 }
 
-.icono_perfil {
-  font-size: 40px;
-  background-color: transparent;
-  border: none;
-  margin-top: 10px;
+/*-------------Parte de al darle click al perfil----------*/
+
+.perfil {
+  margin: auto;
+  position: relative;
 }
 
-.section_post {
+.div-img {
+  position: relative;
+  /*define el ancho del contenedor*/
+  width: 35px;
+  /*define el alto del contenedor*/
+  height: 35px;
+  border-radius: 50%;
+  overflow: hidden;
+  /* Oculta cualquier contenido que se desborde del contenedor */
+  cursor: pointer;
+}
+
+.imagen-perfil {
+  /*define el ancho del contenedor*/
+  width: 35px;
+  /*define el alto del contenedor*/
+  height: 35px;
+  border-radius: 50%;
+  /* Hace que la imagen tenga forma circular */
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+  /* Centrar horizontalmente */
+}
+
+.info-perfil {
+  position: absolute;
+  top: 120px;
+  right: -10px;
+  /* agrega espacio dentro del elemento, creando un margen interno alrededor del contenido*/
+  padding: 10px 20px;
+  /*ponemos el fondo de color blanco*/
+  background-color: #fff;
+  /*define el ancho del contenedor*/
+  width: 200px;
+  box-sizing: 0 5px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  transition: 0.5s;
+  visibility: hidden;
+  /* El elemento se hace invisible */
+  opacity: 0;
+}
+
+.info-perfil.active {
+  top: 60px;
+  visibility: visible;
+  /* El elemento se hace visible */
+  opacity: 1;
+}
+
+/*::before sirve para agregar algo antes como un div q esta antes de esa clase algo asi */
+.info-perfil::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  right: 28px;
+  /*define el ancho del contenedor*/
+  width: 20px;
+  /*define el alto del contenedor*/
+  height: 20px;
+  /*ponemos el fondo de color blanco*/
+  background-color: #fff;
+  transform: rotate(45deg);
+}
+
+.name_google {
+  /*define el ancho del contenedor*/
   width: 100%;
+  text-align: center;
+  font-size: 18px;
+  color: #000;
+}
+
+.email_google {
+  font-size: 12px;
+  color: #000;
+  text-align: center;
+}
+
+.cerrar_sesion {
+  display: flex;
+  cursor: pointer;
+  color: #000;
+  justify-content: center;
+  margin: 5px;
+  font-size: 1em;
+}
+
+.cerrar_sesion i {
+  border-radius: 50%;
+  /*ponemos el fondo de color fucsia*/
+  background-color: #BB377D;
+  color: #fff;
+  /* agrega espacio dentro del elemento, creando un margen interno alrededor del contenido*/
+  padding: 8px;
+  margin-right: 5px;
+}
+
+/*--------Seccion del post---------*/
+.section_post {
+  /*define el ancho del contenedor*/
+  width: 100%;
+  /*define el alto del contenedor*/
   height: auto;
+  /*ponemos el fondo de color morado como oscuro*/
   background-color: #4B4355;
   border-radius: 8px;
-<<<<<<< HEAD
-  margin: 15px 0 10px 0;
-=======
   margin: 10px 0;
->>>>>>> c7e6697e2ca15fc79b267506150958f97554b86c
+  /* agrega espacio dentro del elemento, creando un margen interno alrededor del contenido*/
+  padding: 15px;
   display: flex;
   flex-direction: column;
+}
+
+.section_button {
+  display: flex;
+  /* se utiliza para alinear los elementos flexibles al final del eje principal del contenedor*/
+  justify-content: flex-end;
 }
 
 .section_text {
   display: flex;
   align-items: center;
-  /* flex-direction: row; */
+  justify-content: center;
 }
 
 .boton_camara {
-  flex: 20%;
+  display: flex;
   justify-content: flex-start;
   align-items: center;
   font-size: 25px;
   color: #4B4355;
+  /*ponemos el fondo de color trasparente*/
   background-color: transparent;
   border: none;
+  /*define el ancho maximo del contenedor*/
   max-width: 65px;
+  /*define el altoo del contenedor*/
   height: 100%;
+  /* agrega espacio dentro del elemento, creando un margen interno alrededor del contenido*/
   padding: 5px 5px;
   margin: -37px;
 }
 
 .boton_camara:hover {
-  color: black;
+  color: #BB377D;
 }
 
 
-.feed_new_post,
-.textarea_publicacion {
+.feed_new_post {
+  /*define el ancho del contenedor*/
   width: 80%;
+  /*define el alto del contenedor*/
   height: 50px;
-  background-color: #C9C7CC;
+  /*ponemos el fondo de color blanco*/
+  background-color: #fff;
   border-radius: 8px;
   font-size: 20px;
   border: none;
   margin: 10px 0px 10px 10px;
+  /* agrega espacio dentro del elemento, creando un margen interno alrededor del contenido*/
   padding: 10px 37px 10px 10px;
+  /*pone el texto a la ezquierda*/
   text-align: left;
 
 }
@@ -525,113 +697,289 @@ body {
   color: grey;
 }
 
-.mensaje_bienvenida,
-.name_user {
-  font-size: 23px;
+.mensaje_bienvenida {
+  font-size: 30px;
   font-family: "Poppins", sans-serif;
   color: white;
   margin: 10px 0px 0 10px;
+  text-align: center;
 }
 
-/*---Pendiente por revisar estilos en button---*/
-button {
-  width: 95%;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 10px;
-  border: none;
+.name_user {
+  font-size: 28px;
+  font-family: "Poppins", sans-serif;
+  color: #8beafd;
+  margin: 10px 0px 0 10px;
+  text-align: center;
 }
 
 .button_publicar {
-  width: 25%;
-  border-radius: 7px;
-  background-color: #ccc;
+  /*define el ancho del contenedor (1rem = 16px)*/
+  width: 10rem;
+  border-radius: 15px;
+  /*ponemos el fondo de color rosita*/
+  background-color: #FBD3E9;
   border: none;
+  /* agrega espacio dentro del elemento, creando un margen interno alrededor del contenido*/
   padding: 7px 8px;
   font-size: 16px;
-  color: aliceblue;
-  margin-left: 10px;
+  color: #BB377D;
+  margin-right: 70px;
 }
 
-.button_publicar:hover,
-.feed_new_post:hover {
-  background-color: white;
-  color: grey;
+.button_publicar:hover {
+  /*ponemos el fondo de color fucsia*/
+  background: #BB377D;
+  /*agrega sombras*/
+  box-shadow: 0px 4px 35px -5px #BB377D;
+  color: aliceblue;
 }
 
 .section_publicaciones {
+  /*define el ancho del contenedor*/
   width: 100%;
+  /*define el alto del contenedor*/
   height: auto;
-<<<<<<< HEAD
-  background-color: #4B4355;
-=======
-  /* background-color: #4B4355; */
->>>>>>> c7e6697e2ca15fc79b267506150958f97554b86c
   border-radius: 8px;
+  /*Utiliza un diseño en cuadrícula para organizar elementos en filas y columnas.*/
   display: grid;
 }
 
 
 .container_publicacion {
+  /*Utiliza un diseño en cuadrícula para organizar elementos en filas y columnas.*/
   display: grid;
-<<<<<<< HEAD
-=======
   margin: 10px 0px;
+  /*ponemos el fondo de color morado como oscuro*/
   background-color: #4B4355;
->>>>>>> c7e6697e2ca15fc79b267506150958f97554b86c
 }
 
-section.like_edit_delete {
-  width: 100%;
-  height: auto;
+.like_edit_delete {
+  /*Utiliza un diseño en cuadrícula para organizar elementos en filas y columnas.*/
   display: grid;
-  grid-template-columns: 10% 10% 10% 10%;
+  grid-template-columns: repeat(5, 1fr);
+  /* Cuatro columnas igualmente distribuidas */
+  margin: auto;
+  align-items: center;
+  /* agrega espacio dentro del elemento, creando un margen interno alrededor del contenido*/
+  padding: 10px;
+
 }
 
-button.icono_like,
-button.icono_edit,
-button.icono_delete {
+.icono_like,
+.icono_edit,
+.icono_delete,
+.icono_cancelar {
+  /*ponemos el fondo de color trasparente*/
   background-color: transparent;
   font-size: 20px;
-  color: #C9C7CC;
-  max-width: 65px;
-  height: 100%;
+  color: #FBD3E9;
+  /* agrega espacio dentro del elemento, creando un margen interno alrededor del contenido*/
   padding: 5px 5px;
-  margin: 0 5px;
-  justify-content: center;
   cursor: pointer;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*define el alto del contenedor*/
+  height: 50px;
+  /*define el ancho del contenedor*/
+  width: 50px;
+  margin: auto;
 }
 
+
 .contador_like {
-  /* text-align: center; */
+  /*define el ancho del contenedor*/
   width: 22px;
-  color: #C9C7CC;
+  color: #FBD3E9;
   font-size: 23px;
 }
+
+.text-container {
+  display: flex;
+  justify-content: center;
+}
+
+.textarea_publicacion {
+  /*define el ancho del contenedor*/
+  width: 50%;
+  /*define el alto del contenedor*/
+  height: 50px;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 20px;
+  border: none;
+  outline-style: none;
+  margin: 10px 0px 10px 10px;
+  /* agrega espacio dentro del elemento, creando un margen interno alrededor del contenido*/
+  padding: 10px 37px 10px 10px;
+  /*ponemos el texto a la izq*/
+  text-align: left;
+  /*ponemos el fondo de color morado como oscuro*/
+  background-color: #4B4355;
+
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+}
+
+.uploaded-image {
+  /*define el ancho del contenedor (1 rem = 16px)*/
+  width: 20rem;
+  /*define el altoo del contenedo (1 rem = 16px)*/
+  height: 15rem;
+  display: none;
+}
+
+/*#8beafd azul logo*/
 
 /*--------Responsive (Feed)--------*/
 
 @media (max-width: 768px) {
   .feed_logo {
+    /*define el ancho del contenedor*/
     width: 200px;
+    /*define el alto del contenedor*/
     height: 50px;
   }
 
-  .icono_perfil {
-    font-size: 35px;
+  .mensaje_bienvenida {
+    font-size: 20px;
   }
-<<<<<<< HEAD
-=======
+
+  .section_text {
+    /*alinear los elementos flexibles horizontalmente dentro de su contenedor(a la derecha)*/
+    justify-content: flex-start;
+  }
+
+  .feed_new_post {
+    /*define el ancho del contenedor*/
+    width: 90%;
+  }
+
+  .section_button {
+    /*alinear los elementos flexibles horizontalmente dentro de su contenedor(a la derecha)*/
+    justify-content: flex-start;
+  }
+
+  .button_publicar {
+    margin-left: 10px;
+  }
+
+  .textarea_publicacion {
+    /*define el ancho del contenedor*/
+    width: 80%;
+    /* agrega espacio dentro del elemento, creando un margen interno alrededor del contenido*/
+    padding: 8px;
+    margin: 8px;
+    text-align: center;
+  }
+
 }
 
+/* -------Estilos modal imagenes--------*/
 
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /*ponemos el fondo de color negro*/
+  background-color: #111111bd;
+  display: flex;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .6s .9s;
+  --transform: translateY(-100vh);
+  --transition: transform .8s;
+}
 
+.modal--show {
+  opacity: 1;
+  /* permite que el elemento reciba eventos de puntero, es decir, que pueda interactuar con el cursor del usuario.*/
+  pointer-events: unset;
+  transition: opacity .6s;
+  --transform: translateY(0);
+  --transition: transform .8s .8s;
+}
 
+.modal__container {
+  margin: 120px auto;
+  /*define el ancho del contenedor*/
+  width: 90%;
+  /*define el ancho maximo del contenedor*/
+  max-width: 600px;
+  /*define el alto maximo del contenedor*/
+  max-height: 90%;
+  /*ponemos el fondo de color blanco*/
+  background-color: #fff;
+  border-radius: 6px;
+  /* agrega espacio dentro del elemento, creando un margen interno alrededor del contenido*/
+  padding: 3em 2.5em;
+  /*Utiliza un diseño en cuadrícula para organizar elementos en filas y columnas.*/
+  display: grid;
+  /*establece el espacio entre las filas y columnas de un diseño en cuadrícula.*/
+  gap: 1em;
+  place-items: center;
+  grid-auto-columns: 100%;
+  transform: var(--transform);
+  transition: var(--transition);
+}
 
+.modal__title {
+  font-size: 2.5rem;
+  color: #BB377D;
+}
 
-.error {
+.modal__paragraph {
+  text-align: justify;
+
+}
+
+.modal__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__buttons {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.modal__upload,
+.modal__close {
+  /*define el ancho del contenedor*/
+  width: 50%;
+  /*define el alto del contenedor*/
+  height: 50px;
+  text-decoration: none;
   color: #fff;
-  margin: auto;
->>>>>>> c7e6697e2ca15fc79b267506150958f97554b86c
+  /*ponemos el fondo de color celeste oscurito*/
+  background-color: #5daab9;
+  /* agrega espacio dentro del elemento, creando un margen interno alrededor del contenido*/
+  padding: 1em 3em;
+  border: 1px solid;
+  border-radius: 6px;
+  font-weight: 300;
+  font-family: "Poppins", sans-serif;
+  transition: background-color .3s;
+}
+
+.modal__close:hover {
+  color: #5daab9;
+  /*ponemos el fondo de color blanco*/
+  background-color: #fff;
+}
+
+.modal__upload:hover {
+  color: #5daab9;
+  /*ponemos el fondo de color blanco*/
+  background-color: #fff;
 }

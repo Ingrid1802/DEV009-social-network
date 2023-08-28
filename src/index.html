@@ -1,15 +1,32 @@
+<!-- Esta declaración define el tipo de documento como HTML5 -->
 <!DOCTYPE html>
+<!-- La etiqueta html es el contenedor principal de todo el contenido HTML. El atributo lang establece el idioma 
+  del documento (en este caso, inglés pero si quisiera en español cambio en por es)-->
 <html lang="en">
+<!-- Esta sección contiene metadatos y enlaces a recursos externos que el navegador utiliza para mostrar la página -->
+
 <head>
+  <!--  Define el conjunto de caracteres a utilizar (UTF-8 es ampliamente compatible y soporta varios idiomas). -->
   <meta charset="UTF-8">
+  <!-- Controla cómo se ajusta y escala la página en dispositivos móviles.-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--  Especifica la versión de Internet Explorer que se debe utilizar (en este caso, "edge" se refiere a la última versión compatible). -->
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Enlaza una hoja de estilos externa que contiene iconos de Font Awesome. -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <!-- Enlaza al css para que le podamos dar estilos a la pagina-->
   <link rel="stylesheet" href="style.css" />
+  <!-- Define el título de la pestaña o ventana del navegador -->
   <title>Document</title>
 </head>
+
+<!-- Aquí es donde se coloca el contenido visible de la página. -->
+
 <body>
+  <!-- Un contenedor con el identificador "root", que se utilizará para insertar contenido dinámico generado por JavaScript.-->
   <div id="root"></div>
+  <!-- Enlaza un archivo JavaScript llamado "main.js" utilizando el módulo JavaScript.-->
   <script type="module" src="main.js"></script>
 </body>
+
 </html>
